@@ -1,4 +1,4 @@
-module fiber_use_route
+module github.com/utherbit/fiber_use_route
 
 go 1.20
 
