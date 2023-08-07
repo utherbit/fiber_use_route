@@ -1,7 +1,6 @@
 package fiber_use_route
 
 import (
-	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/utils"
 	"sort"
 	"strings"
@@ -130,6 +129,9 @@ type route struct {
 	Path   string `json:"path"`   // Original registered route path
 }
 
+func (r *route) Orig() fiber.Route {
+	return r.orig
+}
 func (app *managerApp) addRoute(orig fiber.Route) *route {
 	method := utils.ToUpper(orig.Method)
 	pathRaw := orig.Path
