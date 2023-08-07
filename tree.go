@@ -1,6 +1,7 @@
 package fiber_use_route
 
 import (
+	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/utils"
 	"sort"
 	"strings"
