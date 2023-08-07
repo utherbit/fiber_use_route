@@ -1,12 +1,11 @@
 # Fiber use route
 
-### Gratitude
-___
+## Gratitude
+
 Hello. First of all, I want to thank the [fiber community](https://github.com/gofiber) for developing a great [framework fiber](https://github.com/gofiber/fiber).
 For all the time I have been using the fiber framework, I have not been able to identify significant shortcomings, this is very pleasing, thanks for that.
 
-### Issue
-___
+## Issue
 
 The only downside I've encountered is that it's not possible to get the path inside the middleware. I understand fiber routing and I understand why it is not possible in the concept of a fast fiber framework.
 
