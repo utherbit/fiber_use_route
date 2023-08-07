@@ -133,3 +133,6 @@ func main() {
 
 func demoHandler(*fiber.Ctx) error { return nil }
 ```
+### for the future
+
+I do not consider the provided solution correct, it is a crutch. I suggest to use it only as a temporary solution that we have encountered. I hope that in version 3 of the fiber there will be a more correct way to get the path in the middleware
