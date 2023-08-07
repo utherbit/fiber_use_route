@@ -11,15 +11,13 @@ The only downside I've encountered is that it's not possible to get the path ins
 
 Also, this problem is described in one of the [fiber issues](https://github.com/gofiber/fiber/issues/2195)
 
-### Solution
-___
+## Solution
 
 To solve this problem, I wrote this utility. It allows you to get *fiber.Route inside Middlewares
 
 This solution, like a fiber, indexes all your routes at startup and searches them during middleware execution, regardless of whether you use a variable in the context. Be prepared for a slight increase in memory consumption and execution time
 
-### Usage
-___
+## Usage
 
 In your project, install the fiber packages and utilities for using routes
 
@@ -72,9 +70,7 @@ app.Use(func(ctx *fiber.Ctx) error {
 furApp.InitFiberApp(app)
 ```
 
-
-### Example
-___
+## Example
 
 ```go
 package main
@@ -137,11 +133,13 @@ func main() {
 
 func demoHandler(*fiber.Ctx) error { return nil }
 ```
-### for the future
-___
+## for the future
 
 I do not consider the provided solution correct, it is a crutch. I suggest to use it only as a temporary solution that we have encountered. I hope that in version 3 of the fiber there will be a more correct way to get the path in the middleware
 
-### License
-___
-MIT
+## License
+Fiber_use_route is free and open source software licensed under the [MIT license](https://github.com/utherbit/fiber_use_route/blob/master/LICENSE).
+
+the project uses a third party fiber library
+
+[Fiber license](https://github.com/gofiber/fiber/blob/master/LICENSE)
