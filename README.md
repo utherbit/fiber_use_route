@@ -1,22 +1,26 @@
 # Fiber use route
 
 ### Gratitude
+___
 Hello. First of all, I want to thank the [fiber community](https://github.com/gofiber) for developing a great [framework fiber](https://github.com/gofiber/fiber).
 For all the time I have been using the fiber framework, I have not been able to identify significant shortcomings, this is very pleasing, thanks for that.
 
 ### Issue
+___
 
 The only downside I've encountered is that it's not possible to get the path inside the middleware. I understand fiber routing and I understand why it is not possible in the concept of a fast fiber framework.
 
 Also, this problem is described in one of the [fiber issues](https://github.com/gofiber/fiber/issues/2195)
 
 ### Solution
+___
 
 To solve this problem, I wrote this utility. It allows you to get *fiber.Route inside Middlewares
 
 This solution, like a fiber, indexes all your routes at startup and searches them during middleware execution, regardless of whether you use a variable in the context. Be prepared for a slight increase in memory consumption and execution time
 
-## Usage
+### Usage
+___
 
 In your project, install the fiber packages and utilities for using routes
 
@@ -71,6 +75,7 @@ furApp.InitFiberApp(app)
 
 
 ### Example
+___
 
 ```go
 package main
@@ -134,5 +139,10 @@ func main() {
 func demoHandler(*fiber.Ctx) error { return nil }
 ```
 ### for the future
+___
 
 I do not consider the provided solution correct, it is a crutch. I suggest to use it only as a temporary solution that we have encountered. I hope that in version 3 of the fiber there will be a more correct way to get the path in the middleware
+
+### License
+___
+MIT
